@@ -1,0 +1,29 @@
+spring:
+  config:
+    import: application-secret.yml
+  thymeleaf:
+    cache: false
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+    static-path-pattern: /static/**
+  profiles:
+    default: local
+    include: secret
+    active: secret
+  web:
+    resources:
+      static-locations:
+        classpath:/static/
+      add-mappings: true
+  data:
+    mongodb:
+      host: "mongoserver1.example.com"
+      port: 27017
+      database: "test"
+      username: "user"
+      password: "secret"
+logging:
+  level:
+    root: info
