@@ -1,0 +1,24 @@
+.image-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.image-wrapper.sliding.right {
+    transform: translateX(-100%); /* 오른쪽으로 나가면서 슬라이드 */
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;;
+    opacity: 0;
+}
+
+.image-wrapper.sliding.left {
+    transform: translateX(100%); /* 왼쪽으로 나가면서 슬라이드 */
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;;
+    opacity: 0;
+}
+
+.slide-image {
+    max-width: 100%;
+    height: auto;
+    position: relative;
+}
