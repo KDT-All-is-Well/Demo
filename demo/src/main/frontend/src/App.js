@@ -1,24 +1,17 @@
 import { Outlet } from 'react-router-dom';
-import { ThemeProvider, createGlobalStyle, styled } from 'styled-components';
-import theme from './styles/theme';
+import { ThemeProvider } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
+import Container from '@mui/material/Container';
+import theme from './styles/theme.js';
 
-
-const GlobalStyle = createGlobalStyle`
-    body {
-      min-width: 360px;
-      max-width: 1280px;
-      min-height: 740px;
-      margin: 0 auto;
-    }
-`;
 
 function App() {
     return (
         <ThemeProvider theme={theme}>
-            <GlobalStyle />
-            <>
+            <CssBaseline />
+            <Container>
                 <Outlet />
-            </>
+            </Container>
         </ThemeProvider>
     );
 }
