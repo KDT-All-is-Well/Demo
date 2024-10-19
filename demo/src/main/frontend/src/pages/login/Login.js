@@ -1,18 +1,22 @@
 import React from 'react';
 import BackgroundBox from '../../components/common/BackgroundBox';
 import Typography from '@mui/material/Typography';
-import LongButton from '../../components/common/LongButton';
-
+import LoginForm from '../../components/login/LoginForm';
+import FindInfo from '../../components/login/FindInfo';
+import SocialLogin from '../../components/login/SocialLogin';
+import LinkJoin from '../../components/login/LinkJoin'
 
 function Landing() {
     return (
         <BackgroundBox>
-            <Typography variant='h1' style={{whiteSpace: 'nowrap', margin:'10%'}}>
+            <Typography variant='h1' style={{whiteSpace: 'nowrap', margin:'5vh'}}>
                 로그인
             </Typography>
-            <LongButton style={{marginTop:'5%', marginBottom: '10%'}}>
-                로그인
-            </LongButton>
+
+            <LoginForm />
+            <FindInfo />
+            <SocialLogin />
+            <LinkJoin />
         </BackgroundBox>
     );
 }

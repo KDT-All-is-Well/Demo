@@ -38,3 +38,4 @@ out/
 /src/main/resources/static/application_secret.yml
 
 /demo/build/resources/main/static/application-secret.yml
+*/node_modules
