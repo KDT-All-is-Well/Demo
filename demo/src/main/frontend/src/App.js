@@ -1,19 +1,18 @@
-import {useEffect, useState} from "react";
-import axios from "axios";
+import { Outlet } from 'react-router-dom';
+import { ThemeProvider } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
+import Container from '@mui/material/Container';
+import theme from './styles/theme.js';
+
 
 function App() {
-    const [hello, setHello] = useState('');
-
-    useEffect(() => {
-        axios.get('/api/test')
-            .then((res) => {
-                setHello(res.data);
-            })
-    }, []);
     return (
-        <div className="App">
-            백엔드 데이터 : {hello}
-        </div>
+        <ThemeProvider theme={theme}>
+            <CssBaseline />
+            <Container>
+                <Outlet />
+            </Container>
+        </ThemeProvider>
     );
 }
 
